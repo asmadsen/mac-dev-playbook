@@ -39,6 +39,7 @@ homebrew_installed_packages:
   - watch
   - xz
   - yamllint
+  - ynqa/tap/jnv
 
 homebrew_cask_apps:
   - 1password

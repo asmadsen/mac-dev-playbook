@@ -1,9 +1,34 @@
 ---
 configure_dotfiles: true
+configure_terminal: true
+configure_osx: false
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+ - Mail
+ - Safari
+ - Maps
+ - Photos
+ - FaceTime
+ - Calendar
+ - Contacts
+ - Reminders
+ - Notes
+ - Freeform
+ - TV
+ - Music
+ - 'App Store'
+
+dockitems_persist: []
+# - name: "Sublime Text"
+#   path: "/Applications/Sublime Text.app/"
+#   pos: 5
 
 dotfiles_repo: git@github.com:asmadsen/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/src/github.com/asmadsen/dotfiles
+dotfiles_repo_version: master # Replace with your default branch
 dotfiles_files:
   - .zshrc
   - .gitconfig
@@ -11,56 +36,30 @@ dotfiles_files:
   - .gitignore
 
 homebrew_installed_packages:
-  - awscli
-  - deno
-  - dive
   - gh
   - go
-  - gradle
-  - graphviz
   - grep
-  - helm
-  - jenv
   - jq
-  - k6
-  - kube-capacity
-  - kubernetes-cli
-  - kubeval
-  - kustomize
-  - prometheus
-  - terrascan
-  - openjdk
-  - openjdk@11
-  - openjdk@17
-  - python@3.11
-  - tfenv
-  - thefuck
   - tree
   - watch
   - xz
-  - yamllint
-  - ynqa/tap/jnv
 
+homebrew_taps: []
+
+homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - 1password-cli
   - arc
   - chromium
   - docker
-  - google-chrome
-  - iterm2
   - jetbrains-toolbox
-  - kubecontext
-  - logitech-presentation
   - pocket-casts
   - raspberry-pi-imager
   - slack
   - spotify
-  - todoist
   - vivaldi
-  - warp
 
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask-fonts
-  - robscott/tap # for kube-capacity
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []

@@ -1,6 +1,5 @@
 ---
 configure_dotfiles: true
-configure_terminal: true
 configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
@@ -19,6 +18,7 @@ dockitems_remove:
  - TV
  - Music
  - 'App Store'
+# - Podcasts
 
 dockitems_persist: []
 # - name: "Sublime Text"
@@ -43,23 +43,23 @@ homebrew_installed_packages:
   - tree
   - watch
   - xz
+  - ssh-copy-id
 
 homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - 1password
-  - 1password-cli
-  - arc
-  - chromium
   - docker
+  - ghostty
   - jetbrains-toolbox
+  - kubecontext
   - pocket-casts
+  - proton-mail
+  - proton-pass
   - raspberry-pi-imager
   - slack
   - spotify
   - vivaldi
-
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []

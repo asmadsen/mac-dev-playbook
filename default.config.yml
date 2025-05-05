@@ -35,8 +35,10 @@ dotfiles_files:
   - .dnb.gitconfig
   - .gitignore
   - .macos
+  - .config/oh-my-posh/config.toml
 
 homebrew_installed_packages:
+  - fzf
   - gh
   - go
   - grep
